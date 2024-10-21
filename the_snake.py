@@ -1,6 +1,7 @@
 from random import randrange
 import pygame
 
+
 # Константы для размеров поля и сетки:
 SCREEN_WIDTH, SCREEN_HEIGHT = 640, 480
 GRID_SIZE = 20
@@ -20,7 +21,7 @@ APPLE_COLOR = (255, 0, 0)
 # Цвет змейки.
 SNAKE_COLOR = (0, 255, 0)
 # Скорость движения змейки.
-SPEED = 2
+SPEED = 20
 # Настройка игрового окна:
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT), 0, 32)
 
@@ -85,7 +86,7 @@ class Snake(GameObject):
     def __init__(self):
         super().__init__()
         self.body_color = SNAKE_COLOR
-        self.positions = [(SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2), ]
+        self.positions = [(SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2),]
         self.length = 1
         self.direction = RIGHT
         self.next_direction = None
@@ -153,7 +154,7 @@ class Snake(GameObject):
         self.update_direction()
 
     def reset(self):
-        """Метод окончания игры и начала следующей."""
+        """Метод окончиния игры и начала следующей."""
         main()
 
 
